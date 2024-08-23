@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     width: 100vw; /* Use vw for width */
     height: 100vh; /* Use vh for height */
-    position: relative; /* Ensure proper positioning of background and footer */
+    position: fixed;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw; /* Use vw for width */
@@ -41,9 +41,9 @@ body {
     height: 150px; /* Hauteur de la couverture d'album */
     border-radius: 8px;
     background-color: #4a5568; /* Couleur de fond en cas d'absence d'image */
-    position: absolute;
-    top: 20%; /* Ajuste la position verticale (50% pour centrer verticalement) */
-    left: 86.5%; /* Ajuste la position horizontale à 50% du parent */
+    position: fixed;
+    top: 85%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    left: 94%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
     z-index: 3; /* Place la couverture au-dessus des autres éléments */
 }
@@ -69,8 +69,9 @@ body {
 }
 
 .search-container {
-    position: relative;
+    position: fixed;
     width: 50%;
+    left: 50%
 }
 
 .search-icon {
@@ -93,9 +94,9 @@ body {
 /* Search Results Container */
 #searchResults {
     display: none; /* Masquer par défaut */
-    position: absolute; /* Positionnement absolu sous la barre de recherche */
-    top: 100%; /* Positionne le conteneur juste en dessous de la barre de recherche */
-    left: 0;
+    position: fixed;
+    top: 7%; /* Positionne le conteneur juste en dessous de la barre de recherche */
+    left: 50%;
     width: 100%;
     max-height: 300px; /* Hauteur maximale pour éviter le débordement */
     background: #a5a5a500; /* Fond transparent */
@@ -186,8 +187,7 @@ body {
 
 .sidebar {
     width: 20%;
-    height: 671px;
-    top: 15px;
+    height: 87%;
     background-color: #35353510; /* Footer matches the header and sidebar */
     box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2); /* Ombre douce seulement à droite */
     padding: 16px;
@@ -235,8 +235,8 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 8px;
-    position: absolute; /* Positionnement absolu pour permettre le contrôle précis */
-    top: 15%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    position: fixed;
+    top: 85%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 50%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
     z-index: 2; /* Place les infos au-dessus des autres éléments mais en dessous des contrôles */
@@ -246,16 +246,16 @@ body {
 .album-artist {
     font-size: 16px;
     color: #c4c4c4;
-    position: absolute; /* Positionnement absolu pour permettre le contrôle précis */
-    top: 30%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    position: fixed;
+    top: 87%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 50%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
     z-index: 2; /* Place les infos au-dessus des autres éléments mais en dessous des contrôles */
     margin-bottom: 20px; /* Ajustez cette valeur en fonction de votre mise en page */
 }
 .time {
-    position: absolute; /* Position absolue pour utiliser left et top */
-    top: 92%; /* Centre verticalement */
+    position: fixed;
+    top: 98%; /* Centre verticalement */
     left: 50%; /* Centre horizontalement */
     transform: translate(-50%, -50%); /* Ajuste le centrage en fonction de la taille de l'élément */
     color: #ffffff; /* Couleur du texte */
@@ -272,8 +272,8 @@ body {
     width: 80%; /* Largeur de la barre de progression */
     max-width: 1200px; /* Largeur maximale si souhaitée */
     z-index: 1; /* Place la barre de progression en dessous des contrôles */
-    position: absolute;      /* Permet un contrôle précis du positionnement */
-    top: 80%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    position: fixed;
+    top: 95%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 45%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
     z-index: 2; /* Place les infos au-dessus des autres éléments mais en dessous des contrôles */
@@ -290,7 +290,7 @@ body {
     outline: none;
     opacity: 0.7;
     transition: opacity .2s;
-    position: absolute;      /* Permet un contrôle précis du positionnement */
+    position: fixed;
     top: 80%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 60%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
@@ -381,7 +381,7 @@ body {
     background-color: #35353510; /* Footer matches the header and sidebar */
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2); /* Ombre seulement à droite */
 
-    position: fixed; /* Keep the footer at the bottom */
+    position: fixed;
     bottom: 0; /* Align to the bottom */
     left: 0;
     width: 100%; /* Full width */
@@ -396,8 +396,8 @@ body {
     margin-top: 20px;        /* Espace au-dessus du conteneur de contrôles */
     z-index: 2;              /* Assure que les contrôles sont au-dessus des autres éléments */
     width: 100%;             /* Prend toute la largeur disponible */
-    position: absolute;      /* Permet un contrôle précis du positionnement */
-    top: 50%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    position: fixed;
+    top: 90%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 50%; /* Ajuste la position horizontale à 50% du parent */
     transform: translate(-50%, -50%); /* Centre l'élément en ajustant la position par rapport à son propre centre */
     z-index: 2; /* Place les infos au-dessus des autres éléments mais en dessous des contrôles */
@@ -441,9 +441,9 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 1650px; /* Espace à droite pour l'alignement */
-    position: relative; /* Ajoutez cette ligne */
-    top: 60px; /* Déplace le contrôle du volume vers le bas de 100 pixels */
+    left: 90.5%; /* Espace à droite pour l'alignement */
+    position: fixed;
+    top: 94.5%; /* Déplace le contrôle du volume vers le bas de 100 pixels */
 }
 
 
@@ -501,7 +501,7 @@ body {
 /* Suggestions Container */
 #suggestions-container {
     display: none; /* Masquer par défaut */
-    position: absolute; /* Positionnement absolu sous la barre de recherche */
+    position: fixed;
     top: 100%; /* Positionne le conteneur juste en dessous de la barre de recherche */
     left: 0;
     width: 100%;
@@ -514,7 +514,7 @@ body {
 /* Lyrics Container */
 .lyrics-container {
     display: none; /* Masquer par défaut */
-    position: fixed; /* Fixe le conteneur à l'écran */
+    position: fixed;
     top: 50%; /* Centrer verticalement */
     left: 50%; /* Centrer horizontalement */
     transform: translate(-50%, -50%); /* Ajuster pour centrer parfaitement */
@@ -554,7 +554,7 @@ body {
 
 /* Lyrics Close Button */
 .lyrics-close {
-    position: absolute; /* Positionner en haut à droite */
+    position: fixed;
     top: 10px; /* Espacement du haut */
     right: 10px; /* Espacement de la droite */
     font-size: 24px; /* Taille de la police */
@@ -684,11 +684,11 @@ body {
     background-color: #ccc;
 }
 .like-icon {
-    position: absolute;
+    position: fixed;
     font-size: 24px;
     cursor: pointer;
-    margin-left: -450px;
-    margin-top: -40px;
+    top: 91%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    left: 22%; /* Ajuste la position horizontale à 50% du parent */
     transition: color 0.3s, transform 0.3s;
     z-index: 1000; /* Ensure this element is behind the main content */
 
@@ -699,10 +699,10 @@ body {
     transform: scale(1); /* Augmenter la taille légèrement lorsqu'elle est likée */
 }
 .Lyrics-icon {
-    position: absolute;
+    position: fixed;
     font-size: 24px;
     cursor: pointer;
-    top: 55%; /* Ajuste la position verticale (50% pour centrer verticalement) */
+    top: 91%; /* Ajuste la position verticale (50% pour centrer verticalement) */
     left: 77%; /* Ajuste la position horizontale à 50% du parent */
     transition: color 0.3s, transform 0.3s;
     z-index: 1000; /* Ensure this element is behind the main content */
